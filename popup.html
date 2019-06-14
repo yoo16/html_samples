@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+  <a href="http://yoo-s.com" rel="popup" window_name="window_name"
+    window_option="width=500,height=500,toolbar=yes,menubar=yes,scrollbars=yes">rel New Window</a>
+  <a href="http://yoo-s.com" class="popup_class" window_name="window_name"
+    window_option="width=500,height=500,toolbar=yes,menubar=yes,scrollbars=yes">class New Window</a>
+
+  <script>
+    function loadPopupEvent(rel_name, params) {
+      var popupEvent = function (event) {
+        let window_name = this.getAttribute('window_name');
+        let window_option = this.getAttribute('window_option');
+        window.open(this.href, window_name, window_option).focus();
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      var query_string = '[rel = "' + rel_name + '"]';
+      let elements = document.querySelectorAll(query_string);
+      if (!elements) return;
+      [].forEach.call(elements, function (element) {
+        element.addEventListener('click', popupEvent, false);
+      });
+    }
+    function loadPopupClassEvent(class_name, params) {
+      var popupEvent = function (event) {
+        let window_name = this.getAttribute('window_name');
+        let window_option = this.getAttribute('window_option');
+        window.open(this.href, window_name, window_option).focus();
+        event.preventDefault();
+        event.stopPropagation();
+      }
+      let elements = document.getElementsByClassName(class_name);
+      if (!elements) return;
+      [].forEach.call(elements, function (element) {
+        element.addEventListener('click', popupEvent, false);
+      });
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      var params = { name: '_blank', option: 'width=500,height=500,toolbar=yes,menubar=yes,scrollbars=yes' };
+      loadPopupEvent('popup', params);
+      loadPopupClassEvent('popup_class', params);
+    });
+  </script>
+
+</body>
+
+</html>
