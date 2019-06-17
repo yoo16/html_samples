@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="">
+  <script src="js/PwNode.js"></script>
+  <script src="js/PwSortable.js"></script>
+</head>
+
+<body>
+  <button class="pw_sortable" event="click" action="update_sort">Update</button>
+  <table id="sortable-table">
+    <thead>
+      <tr>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr row-id="1">
+        <td>
+          <div>Tokyo</div>
+        </td>
+      </tr>
+      <tr row-id="2">
+        <td>
+          <div>Osaka</div>
+        </td>
+      </tr>
+      <tr row-id="3">
+        <td>
+          <div>Nagoya</div>
+        </td>
+      </tr>
+      <tr row-id="4">
+        <td>
+          <div>Kobe</div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <script>
+    pw_sortable = new PwSortable(
+      {
+        url: '',
+        table_id: 'sortable-table',
+        row_id_column: 'row-id',
+        is_show_up: true,
+        is_show_down: true,
+        drag_label: '[=]',
+        top_label: '[T]',
+        bottom_label: '[B]',
+        is_font_awesome: false
+      }
+    );
+    pw_sortable.edit();
+  </script>
+</body>
+
+</html>
