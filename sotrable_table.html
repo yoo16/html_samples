@@ -8,11 +8,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="">
   <script src="js/PwNode.js"></script>
-  <script src="js/PwSortable.js"></script>
+  <script src="js/PwTableDND.js"></script>
 </head>
 
 <body>
-  <button class="pw_sortable" event="click" action="update_sort">Update</button>
+  <button class="pw_table_dnd" event="click" action="update_sort">Update</button>
   <table id="sortable-table">
     <thead>
       <tr>
@@ -36,7 +36,7 @@
   </table>
 
   <script>
-    pw_sortable = new PwSortable(
+    pw_table_dnd = new PwTableDND(
       {
         url: '',
         table_id: 'sortable-table',
@@ -49,7 +49,7 @@
         is_font_awesome: false
       }
     );
-    pw_sortable.edit();
+    pw_table_dnd.edit();
   </script>
 </body>
 
