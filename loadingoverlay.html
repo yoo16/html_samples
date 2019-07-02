@@ -14,8 +14,8 @@
   <button onclick="loading_overlay.hide('loading1')">hide on element1</button>
   <button onclick="loading_overlay.show('loading2')">show on element2</button>
   <button onclick="loading_overlay.hide('loading2')">hide on element2</button>
-  <button onclick="loading_overlay.show('loading1', {timeout: 3000})">show & hide on element1</button>
-  <button onclick="loading_overlay.show('')">show on body</button>
+  <button onclick="loading_overlay.show('loading1', {timeout: 2000})">show & hide on element1</button>
+  <button onclick="loading_overlay.show('', {timeout: 2000})">show on body</button>
 
   <div id="loading1" class="card">
     This is loading1 element areas.<br>
@@ -93,24 +93,27 @@
           var width = "100%;";
           var height = "100%;";
           var background_size = 'contains';
-  
-          var element = document.getElementById(selector);
-          if (element) {
+          var element = document.body;
+          if (selector) {
+              element = document.getElementById(selector);
               var rect = element.getBoundingClientRect();
-              top = rect.top + "px;";
-              left = rect.left + "px;";
-              width = element.clientWidth + "px;";
-              height = element.clientHeight + "px;";
+              top = rect.top;
+              left = rect.left;
+              width = element.clientWidth;
+              height = element.clientHeight;
               background_size = _this.backgroundSize(element);
-          } else {
-              element = document.body;
-          }
   
+              let td = element.closest('td');
+              if (td) {
+                  top = 0;
+                  left = 0;
+              }
+          }
           style+= "background-size: " + background_size + ";";
-          style+= "top: " + top;
-          style+= "left: " + left;
-          style+= "width: " + width;
-          style+= "height: " + height;
+          style+= "top: " + top + "px;";
+          style+= "left: " + left + "px;";
+          style+= "width: " + width + "px;";
+          style+= "height: " + height + "px;";
           style+="background-image: url(" + loading_image + ");";
   
           _this.loading_overlay_element = document.createElement('div');
@@ -119,9 +122,12 @@
   
           element.appendChild(_this.loading_overlay_element);
 
-          function hideHandler() { _this.hide(selector); }
-          if (options.timeout > 0) {
-            setInterval(hideHandler, options.timeout);
+          function hideHandler() {
+            clearInterval(_this.timer);
+            _this.hide(selector);
+          }
+          if (options && options.timeout > 0) {
+              _this.timer = setInterval(hideHandler, options.timeout);
           }
       }
       this.hide = function(selector) {
