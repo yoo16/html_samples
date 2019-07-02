@@ -13,7 +13,6 @@
   <button onclick="loading_overlay.show('loading1')">show on element</button>
   <button onclick="loading_overlay.hide('loading1')">hide on element</button>
   <button onclick="loading_overlay.show()">show on body</button>
-  <button onclick="loading_overlay.hide()">hide on body</button>
 
   <div id="loading1" class="card">
     This is loading element areas.<br>
@@ -39,46 +38,38 @@
     
         this.show = function(selector) {
             var style = "background-image: url(" + loading_image + ");";
+            style+= "position: absolute;";
+            style+= "z-index: 1050;";
+            style+= "background-color: rgba(255, 255, 255, 0.2);";
+            style+= "background-position: center center;";
+            style+= "background-repeat: no-repeat;";
+
+            var top;
+            var left;
+            var width;
+            var height;
+
+            var element = document.getElementById(selector);
+            if (!element) element = document.body;
+
+            var rect = element.getBoundingClientRect();
+            top = rect.top + "px;";
+            left = rect.left + "px;";
+            width = element.clientWidth + "px;";
+            height = element.clientHeight + "px;";
+            background_size = 'contains;';
+
+            style+= "background-size: " + background_size + ";";
+            style+= "top: " + top;
+            style+= "left: " + left;
+            style+= "width: " + width;
+            style+= "height: " + height;
+
             _this.loading_overlay_element = document.createElement('div');
             _this.loading_overlay_element.classList.add(_this.loading_overlay_name);
-            var element = document.getElementById(selector);
-            if (element) {
-                var rect = element.getBoundingClientRect();
-                var top = rect.top;
-                var left = rect.left;
-                var width = element.clientWidth;
-                var height = element.clientHeight;
-                style+= "position: absolute;";
-                style+= "z-index: 1050;";
-                style+= "background-color: rgba(255, 255, 255, 0.2);";
-                style+= "background-position: center center;";
-                style+= "background-repeat: no-repeat;";
-                style+= "background-size: contains;";
-                style+= "top: " + top + "px;";
-                style+= "left: " + left + "px;";
-                style+= "width: " + width + "px;";
-                style+= "height: " + height + "px;";
-                _this.loading_overlay_element.style = style;
-                element.appendChild(_this.loading_overlay_element);
-            } else {
-                style+= "position: fixed;";
-                style+= "background-color: rgba(255, 255, 255, 0.2);";
-                style+= "flex-direction: column;";
-                style+= "align-items: center;";
-                style+= "justify-content: center;";
-                style+= "background-position: center center;";
-                style+= "background-repeat: no-repeat;";
-                style+= "z-index: 1050;";
-                style+= "background-size: 100px;";
-                style+= "display: flex;";
-                style+= "width: 100%;";
-                style+= "height: 100%;";
-                style+= "top: 0px;";
-                style+= "left: 0px;";
-                _this.loading_overlay_element.style = style;
-    
-                document.body.appendChild(_this.loading_overlay_element);
-            }
+            _this.loading_overlay_element.style = style;
+
+            element.appendChild(_this.loading_overlay_element);
         }
         this.hide = function(selector) {
             var parent_element;
