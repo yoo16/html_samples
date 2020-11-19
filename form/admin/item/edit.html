@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div>
+    <form action="update.php" method="post">
+      <h3>商品名</h3>
+      <input type="text" name="item[name]">
+
+      <h3>価格</h3>
+      <input type="text" name="item[price]">
+
+      <h3>公開</h3>
+      <p>Boolean => true or false</p>
+      <input type="radio" name="item[is_public]" value="1">
+      <label for="">公開</label>
+
+      <input type="radio" name="item[is_public]" value="0">
+      <label for="">非公開</label>
+
+      <input type="hidden" name="staff[id]" value="5">
+
+      <div>
+        <button>更新</button>
+      </div>
+    </form>
+  </div>
+</body>
+
+</html>
