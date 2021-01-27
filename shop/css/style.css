@@ -1,0 +1,14 @@
+.container {
+    margin-top: 20px;
+}
+
+.h2,
+.h3,
+.h4,
+.h5 {
+    margin-top: 20px;
+    background: lightcoral;
+    color: white;
+    padding: 10px;
+    font-size: 1.4rem;
+}
