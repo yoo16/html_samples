@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: "SF Pro JP", "SF Pro Text", "Apple TP", "Myriad Set Pro", "SF Pro Icons", "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "メイリオ", "Meiryo", "ＭＳ Ｐゴシック", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+    font-size: 10pt;
+}
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+h1 {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 1.0rem;
+
+    border-left: 10px solid #b60114;
+}
+
+h2 {
+    margin: 5px 0;
+    padding: 10px 0;
+    font-size: 0.9rem;
+
+    border-bottom: 1px solid #d2d2d2;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+    height: 90px;
+    background-color: rgba(0, 0, 0, 1.0);
+}
+
+header nav {
+    /* 右配置 */
+    margin-left: auto;
+}
+
+header .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 25%;
+    height: 100%;
+    margin: 0;
+    padding: 20px;
+    background: #b60114;
+    color: white;
+    font-size: 2.0rem;
+    font-weight: 800;
+}
+
+header ul {
+    display: flex;
+
+    margin: 0;
+    list-style: none;
+    padding: 30px;
+}
+
+header li {
+    margin-left: 30px;
+}
+
+header a {
+    color: white;
+    font-size: 0.8rem;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 50px;
+    padding-top: 90px;
+}
+
+/* profile */
+#profile {
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+}
+
+#profile ul {
+    font-size: 0.9rem;
+    padding: 10px 14px;
+}
+
+#profile-image .main {
+    /* background: url(../images/ez.jpg); */
+    background: url(../images/okinawa.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+    height: 0;
+    padding-top: 30%;
+}
+
+#profile-image .image {
+    width: 100px;
+    margin-top: -50px;
+    margin-left: 25px;
+    padding: 10px;
+    background: white;
+    border-radius: 50%;
+}
+
+#news {
+
+}
+
+#news .head {
+    display: flex;
+}
+
+#news .head-image {
+    width: 50%;
+}
+
+#news .head-list {
+    width: 50%;
+}
+
+#news .news-list ul {
+    margin-left: 40px;
+}
+
+#news .news-list li {
+    padding: 5px;
+}
+#news .head-image img {
+    width: 100%;
+}

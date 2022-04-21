@@ -1,0 +1,30 @@
+body {
+    color: white;
+}
+
+.wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header {
+    background: rgb(226, 44, 44);
+    height: 100px;
+    padding: 20px;
+}
+
+aside {
+    background: rgb(226, 187, 44);
+    padding: 20px;
+}
+
+main {
+    background: rgb(44, 138, 226);
+    padding: 20px;
+}
+
+footer {
+    background: rgb(0, 189, 97);
+    padding: 20px;
+}
