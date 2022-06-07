@@ -1,0 +1,39 @@
+body {
+    height: 300px;
+}
+
+a {
+    text-decoration: none;
+    color: #0084ff;
+}
+
+/* float-menu */
+#float-menu nav {
+    overflow: hidden;
+}
+
+#float-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#float-menu li {
+    float:left;
+    /* float: right; */
+    background-color: aliceblue;
+    width: 100px;
+    padding: 20px 20px;
+}
+
+/* flex-menu */
+#flex-menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+#flex-menu li {
+    background-color: aliceblue;
+    width: 100px;
+    padding: 20px 20px;
+}

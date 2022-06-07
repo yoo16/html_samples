@@ -1,0 +1,113 @@
+body {
+    height: 300px;
+}
+
+main {
+    height: 80%;
+    background: rgb(115, 173, 115);
+    padding: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: #0084ff;
+}
+
+.contents {
+    color: white;
+}
+
+.contents-left {
+    text-align: left;
+    background: rgb(230, 174, 117);
+    padding: 30px;
+}
+
+.contents-center {
+    text-align: center;
+    background: rgb(60, 123, 60);
+    padding: 30px;
+}
+
+.contents-right {
+    text-align: right;
+    background: rgb(59, 111, 180);
+    padding: 30px;
+}
+
+.base {
+    font-size: 2em;
+}
+
+.text {
+    background-color: rgb(51, 77, 179);
+    font-size: 2rem;
+    color: white;
+}
+
+.top,
+.text-top,
+.middle,
+.baseline,
+.text-bottom,
+.bottom,
+.sub,
+.super {
+    background-color: rgb(168, 57, 57);
+    color: white;
+    font-size: 1rem;
+}
+
+.top {
+    vertical-align: top;
+}
+
+.text-top {
+    vertical-align: text-top;
+}
+
+.middle {
+    vertical-align: middle;
+}
+
+.baseline {
+    vertical-align: baseline;
+}
+
+.text-bottom {
+    vertical-align: text-bottom;
+}
+
+.bottom {
+    vertical-align: bottom;
+}
+
+.sub {
+    vertical-align: sub;
+}
+
+.super {
+    vertical-align: super;
+}
+
+
+h3 {
+    background: rgb(33, 130, 168);
+    color: white;
+    padding: 10px;
+}
+
+h3::before {
+    content: '♠︎';
+    margin-right: 8px;
+}
+
+h3::after {
+    content: '︎❤︎';
+    margin-left: 8px;
+}
+
+.first-letter p::first-letter {
+    font-size: 2em;
+    color: green;
+}
