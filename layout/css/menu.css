@@ -9,7 +9,7 @@ a {
 
 /* float-menu */
 #float-menu nav {
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 #float-menu ul {
@@ -20,7 +20,7 @@ a {
 #float-menu li {
     float:left;
     /* float: right; */
-    background-color: aliceblue;
+    background-color: #f0f8ff;
     width: 100px;
     padding: 20px 20px;
 }
@@ -33,7 +33,12 @@ a {
 }
 
 #flex-menu li {
-    background-color: aliceblue;
+    background-color: #f0f8ff;
     width: 100px;
     padding: 20px 20px;
+}
+
+main {
+    padding : 20px;
+    background-color: #d3d3d3;
 }

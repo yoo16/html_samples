@@ -1,0 +1,26 @@
+.flexbox {
+    border: 2px solid black;
+    /* display: flex; */
+}
+
+.box {
+    height: 100px;
+    width: 200px;
+    display: inline;
+}
+
+.color1 {
+    background-color: #b79873;
+}
+
+.color2 {
+    background-color: #7bb773;
+}
+
+.color3 {
+    background-color: #4888c0;
+}
+
+.color4 {
+    background-color: #c25e55;
+}

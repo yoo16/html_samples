@@ -28,7 +28,7 @@ a {
 }
 
 a.active {
-    /* border-bottom: 3px solid #336bee; */
+    border-bottom: 3px solid #336bee;
 }
 
 a:hover {
@@ -86,7 +86,7 @@ a:hover {
 }
 
 #latest-posts {
-    margin: 20px 0;
+    /* margin: 20px 0; */
 }
 
 /* header */
@@ -126,7 +126,8 @@ footer a {
 }
 
 .container {
-    padding: 0 30px;
+    /* padding: 0 30px; */
+    margin: 0 30px;
 }
 
 /* top */
