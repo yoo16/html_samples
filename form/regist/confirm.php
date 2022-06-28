@@ -1,6 +1,7 @@
 <?php
 if (isset($_POST)) $posts = $_POST;
 if (isset($_FILES['file'])) $file = $_FILES['file'];
+
 ?>
 <!DOCTYPE html>
 <html lang="ja">
