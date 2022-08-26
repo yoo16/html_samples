@@ -25,6 +25,19 @@ a {
     height: 30px;
 }
 
+.icon-home {
+    background: url("../svg/home.svg") left no-repeat;
+}
+
+.icon-search {
+    background: url("../svg/search.svg") left no-repeat;
+}
+
+.icon-profile {
+    background: url("../svg/profile.svg") left no-repeat;
+}
+
+
 .tweet {
     padding: 20px 0;
     border-bottom: 1px solid #e0e0e0;
@@ -45,23 +58,15 @@ a {
     padding: 5px;
 }
 
-.icon-home {
-    background: url("../svg/home.svg") left no-repeat;
+/* .tweet-menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
 }
 
-.icon-search {
-    background: url("../svg/search.svg") left no-repeat;
-}
-
-.icon-profile {
-    background: url("../svg/profile.svg") left no-repeat;
-}
-
-
-.tweet-menu .nav-link {
-    margin-right: 60px;
-    padding-left: 0;
-}
+.tweet-menu li {
+    margin-right: 100px;
+} */
 
 .tweet-menu .icon {
     display: block;
@@ -84,16 +89,4 @@ a {
 
 .icon-trash {
     background: url("../svg/trash.svg") left no-repeat;
-}
-
-#sub-contents .icon {
-    display: block;
-    float: left;
-    width: 30px;
-    height: 30px;
-}
-
-a.icon {
-    font-size: 10px;
-    line-height: 0px;
 }

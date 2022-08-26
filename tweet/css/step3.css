@@ -1,0 +1,38 @@
+a {
+    color: #58aeed;
+    text-decoration: none;
+}
+
+#side-menu {
+    padding: 20px;
+    border-right: 1px solid #e0e0e0;
+    height: 100%;
+}
+
+#side-menu ul {
+    padding: 0;
+}
+
+#side-menu a {
+    font-size: 16px;
+    color: #303030;
+}
+
+#side-menu .icon {
+    display: block;
+    float: left;
+    width: 30px;
+    height: 30px;
+}
+
+.icon-home {
+    background: url("../svg/home.svg") left no-repeat;
+}
+
+.icon-search {
+    background: url("../svg/search.svg") left no-repeat;
+}
+
+.icon-profile {
+    background: url("../svg/profile.svg") left no-repeat;
+}
