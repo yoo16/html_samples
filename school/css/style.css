@@ -1,0 +1,61 @@
+h1 {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #101213;
+}
+
+.banner {
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: cover;
+    width: 100%;
+    height: 0;
+    padding-top: 40%;
+
+    background-image: url(../images/lanch.jpg);
+}
+
+header ul {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+}
+
+#main-nav ul {
+    display: flex;
+}
+
+#main-nav li {
+    float: left;
+    padding: 10px;
+}
+
+#main-nav li:after {
+    content: ">";
+}
+
+#main-nav a {
+    padding: 10px;
+    font-size: 0.8rem;
+    font-weight: 800;
+}
+
+#main-logo {
+    width: 800px;
+}
+
+.sub-nav ul {
+    display: none;
+}
+
+.sub-nav li:before {
+    content: "▶️";
+    margin-right: 10px;
+}
+
+#about-link.hover + .sub-nav {
+    display: block;
+}
