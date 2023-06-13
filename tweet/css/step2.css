@@ -9,30 +9,20 @@ a {
     height: 100%;
 }
 
-#side-menu ul {
-    padding: 0;
-}
-
 #side-menu a {
     font-size: 16px;
     color: #303030;
 }
 
-#side-menu .icon {
-    display: block;
-    float: left;
+#side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#side-menu li {
+    padding: 8px 0;
+}
+
+#side-menu li > img {
     width: 30px;
-    height: 30px;
-}
-
-.icon-home {
-    background: url("../svg/home.svg") left no-repeat;
-}
-
-.icon-search {
-    background: url("../svg/search.svg") left no-repeat;
-}
-
-.icon-profile {
-    background: url("../svg/profile.svg") left no-repeat;
 }

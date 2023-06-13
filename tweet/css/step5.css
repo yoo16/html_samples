@@ -9,46 +9,35 @@ a {
     height: 100%;
 }
 
-#side-menu ul {
-    padding: 0;
-}
-
 #side-menu a {
     font-size: 16px;
     color: #303030;
 }
 
-#side-menu .icon {
-    display: block;
-    float: left;
+#side-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+#side-menu li {
+    padding: 8px 0;
+}
+
+#side-menu li > img {
     width: 30px;
-    height: 30px;
 }
-
-.icon-home {
-    background: url("../svg/home.svg") left no-repeat;
-}
-
-.icon-search {
-    background: url("../svg/search.svg") left no-repeat;
-}
-
-.icon-profile {
-    background: url("../svg/profile.svg") left no-repeat;
-}
-
 
 .tweet {
     padding: 20px 0;
     border-bottom: 1px solid #e0e0e0;
 }
 
-.tweet-img {
+.profile-image {
     padding: 0 5px;
     margin: 0;
 }
 
-.tweet-img img {
+.profile-image img {
     border-radius: 50%;
     width: 38px;
     height: 38px;
@@ -58,35 +47,16 @@ a {
     padding: 5px;
 }
 
-/* .tweet-menu ul {
-    display: flex;
+.tweet-nav ul {
     list-style: none;
     padding: 0;
 }
 
-.tweet-menu li {
-    margin-right: 100px;
-} */
+.tweet-nav li {
+    width: 100px;
+}
 
-.tweet-menu .icon {
-    display: block;
-    color: #8a9aa4;
+.tweet-nav img {
     width: 14px;
     height: 14px;
-}
-
-.icon-bubble {
-    background: url("../svg/bubble.svg") left no-repeat;
-}
-
-.icon-heart {
-    background: url("../svg/heart.svg") left no-repeat;
-}
-
-.icon-loop {
-    background: url("../svg/loop.svg") left no-repeat;
-}
-
-.icon-trash {
-    background: url("../svg/trash.svg") left no-repeat;
 }
